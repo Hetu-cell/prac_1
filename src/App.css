@@ -21,11 +21,65 @@
   color: #ccc;
 }
 
-.car-list {
+/* Controls */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  width: 250px;
+}
+
+.fuel-filter {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.toggle-btn {
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
+}
+
+/* Car Count */
+.car-count {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Grid View */
+.car-list.grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
+}
+
+/* List View */
+.car-list.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .car-card {
@@ -35,6 +89,23 @@
   width: 300px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: white;
+}
+
+.car-card.list-view {
+  display: flex;
+  width: 600px;
+  gap: 20px;
+  text-align: left;
+}
+
+.car-card.list-view .car-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.car-card.list-view .car-info {
+  flex: 1;
 }
 
 .car-image {
@@ -56,6 +127,12 @@ table {
 table td {
   padding: 8px;
   border-bottom: 1px solid #eee;
+}
+
+.no-results {
+  font-size: 18px;
+  color: #999;
+  margin-top: 30px;
 }
 
 .footer {

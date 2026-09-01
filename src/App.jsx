@@ -1,46 +1,47 @@
 import './App.css'
-import carImage from './assets/car.png'
+import Header from './components/Header'
+import CarCard from './components/CarCard'
+import Footer from './components/Footer'
+import car1 from './assets/car.png'
+import car2 from './assets/car2.png'
+import car3 from './assets/car3.png'
 
 function App() {
-  const carName = "Toyota Supra MK5"
-  const carYear = 2024
-  const carColor = "Red"
-  const carPrice = "₹55,00,000"
-  const carEngine = "3.0L Twin-Turbo Inline-6"
-  const carMileage = "10 km/l"
-
   return (
     <div className="app">
-      <h1>Car Details Management System</h1>
+      <Header />
 
-      <div className="car-card">
-        <img src={carImage} alt="Car Image" className="car-image" />
-        <h2>{carName}</h2>
-        <table>
-          <tbody>
-            <tr>
-              <td><strong>Year:</strong></td>
-              <td>{carYear}</td>
-            </tr>
-            <tr>
-              <td><strong>Color:</strong></td>
-              <td>{carColor}</td>
-            </tr>
-            <tr>
-              <td><strong>Price:</strong></td>
-              <td>{carPrice}</td>
-            </tr>
-            <tr>
-              <td><strong>Engine:</strong></td>
-              <td>{carEngine}</td>
-            </tr>
-            <tr>
-              <td><strong>Mileage:</strong></td>
-              <td>{carMileage}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="car-list">
+        <CarCard
+          name="Toyota Supra MK5"
+          year={2024}
+          color="Red"
+          price="₹55,00,000"
+          engine="3.0L Twin-Turbo Inline-6"
+          mileage="10 km/l"
+          image={car1}
+        />
+        <CarCard
+          name="BMW M4 Competition"
+          year={2024}
+          color="Blue"
+          price="₹1,53,00,000"
+          engine="3.0L Twin-Turbo Inline-6"
+          mileage="8 km/l"
+          image={car2}
+        />
+        <CarCard
+          name="Mercedes AMG GT"
+          year={2023}
+          color="Black"
+          price="₹2,45,00,000"
+          engine="4.0L V8 Biturbo"
+          mileage="7 km/l"
+          image={car3}
+        />
       </div>
+
+      <Footer />
     </div>
   )
 }
